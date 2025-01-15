@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division</title>
+</head>
+<body>
+    <h3>Division</h3>
+
+    <h4>First Number: 
+        <input id="firstNumber" type="number" placeholder="Enter a number">
+    </h4>
+
+    <h4>Second Number: 
+        <input id="secondNumber" type="number" placeholder="Enter a number">
+    </h4>
+
+    <button id="divBtn">÷</button>
+
+    <h4>Result: <span id="total"></span></h4>
+
+    <script>
+        var firstNumber = document.getElementById('firstNumber');
+        var secondNumber = document.getElementById('secondNumber');
+        var divBtn = document.getElementById('divBtn');
+        var total = document.getElementById('total');
+
+        divBtn.addEventListener('click', function () {
+            var num1 = parseFloat(firstNumber.value);
+            var num2 = parseFloat(secondNumber.value);
+            if (num2 !== 0) {
+                total.innerText = num1 / num2;
+            } else {
+                total.innerText = "Cannot divide by zero";
+            }
+        });
+    </script>
+    <a href="about.html">Subtraction</a>
+    <a href="index.html">Addition</a>
+    <a href="another.html">Multiplication</a>
+</body>
+</html>
